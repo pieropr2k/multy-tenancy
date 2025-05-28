@@ -1,5 +1,4 @@
-# multy-tenancy
-
+# Diseño e implementación en DynamoDB de una tabla Multi-tenancy
 
 ## Ejercicio:
 
