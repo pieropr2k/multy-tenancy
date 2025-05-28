@@ -7,8 +7,14 @@ Diseñe e implemente en DynamoDB una tabla Multi-tenancy de su preferencia e ins
 
 ## 1. ¿Qué se hará?
 Se creará la tabla Multi-Tenant **t_universidad** en DynamoDB, aplicando el Patrón 1 (Single, Shared Database Schema)
- 
-## 2. Luego construir la imagen:
+
+![](img/crear_tabla_pre.JPG)
+
+A continuación, se muestra la tabla ya creada:
+
+![](img/crear_tabla.JPG)
+
+## 2. Insertar el primer dato con el siguiente formato:
 ```
 {
   "tenant_id": "CIENCIA_DE_LA_COMPUTACION",
@@ -40,4 +46,20 @@ Los otros atributos son adicionales que muestran información del curso seleccio
 
 ## 4. Crear elemento:
 
-Ingresamos a "Crear Elemento" y una vez presionado el enlace llenamos los respectivos datos del elemento a insertar:
+Ingresamos a la opción "Crear Elemento" en la consola de DynamoDB, y una vez allí, llenamos los campos con los datos correspondientes.
+
+A continuación se muestra la inserción del primer dato:
+
+![](img/crear_elemento.JPG)
+
+![](img/crear_elemento_post.JPG)
+
+Después, se procede a insertar los demás cursos correspondientes a cada carrera:
+
+![](img/elementos_creados.JPG)
+
+## 5. Testing:
+
+Finalmente, realizamos una consulta usando la clave de partición (tenant_id) y clave de ordenamiento (course_id) para verificar que la estructura y los datos sean correctos.
+
+![](img/query_ejecutada.JPG)
